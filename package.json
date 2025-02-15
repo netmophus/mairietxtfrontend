@@ -25,9 +25,12 @@
     "serve": "^14.2.4",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {
-  "start": "node server.js",
-  "heroku-postbuild": "npm install && npm run build"
+"scripts": {
+  "start": "serve -s build",  
+  "build": "react-scripts build",
+  "heroku-postbuild": "npm install && npm run build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
 },
 
   "eslintConfig": {
