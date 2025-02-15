@@ -116,10 +116,11 @@ function AssociateTaxesPage() {
       <TableCell align="center">{taxpayer.address}</TableCell>
       <TableCell align="center">{taxpayer.zone?.name || 'N/A'}</TableCell>
       <TableCell>
-                {taxpayer.taxes && taxpayer.taxes.length > 0
-                  ? taxpayer.taxes.join(', ') 
-                  : 'Aucune taxe associée'}
-              </TableCell>
+      {taxpayer.taxes && taxpayer.taxes.length > 0
+        ? taxpayer.taxes.map(tax => tax.name).join(', ')  // On extrait les noms des taxes
+        : 'Aucune taxe associée'}
+    </TableCell>
+
 
 
 
